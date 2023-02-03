@@ -1,14 +1,15 @@
 import express from "express";
 import routes from './src/routes/walletRoutes.js';
-import mongoose, { mongo } from "mongoose";
+import mongoose from "mongoose";
 import bodyParser from 'body-parser';
 
 const app = express();
 const PORT = 3000;
 
 //mongoose connection
+mongoose.set('strictQuery', true);
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost/walletdb', {
+mongoose.connect('mongodb://127.0.0.1/walletdb', {
     useNewUrlParser: true
 });
 

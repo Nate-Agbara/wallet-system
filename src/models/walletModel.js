@@ -3,16 +3,16 @@ import mongoose from "mongoose";
 const Schema = mongoose.Schema;
 
 export const AccountSchema = new Schema({
-    firstname: {
-        type: string,
+    firstName: {
+        type: String,
         required: 'enter firstname'
     },
-    lastname: {
-        type: string,
+    lastName: {
+        type: String,
         required: 'enter lastname'
     },
     email: {
-        type: string
+        type: String
     },
     phone: {
         type: Number
