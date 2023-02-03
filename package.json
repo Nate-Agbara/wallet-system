@@ -1,0 +1,31 @@
+{
+  "name": "wallet",
+  "version": "1.0.0",
+  "description": "simple wallet system",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon ./index.js --exec babel-node"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nate-Agbara/wallet-system.git"
+  },
+  "author": "Nathan Agbara",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nate-Agbara/wallet-system/issues"
+  },
+  "homepage": "https://github.com/Nate-Agbara/wallet-system#readme",
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "express": "^4.18.2",
+    "mongoose": "^6.9.0",
+    "nodemon": "^2.0.20"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.20.7",
+    "@babel/core": "^7.20.12",
+    "@babel/node": "^7.20.7",
+    "@babel/preset-env": "^7.20.2"
+  }
+}
