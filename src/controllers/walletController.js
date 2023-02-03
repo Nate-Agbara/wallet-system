@@ -22,3 +22,12 @@ export const getAllAccounts = (req, res) => {
         res.json(account)
     });
 };
+
+export const getAccountById = (req, res) => {
+    Account.findById(req.params.accountId, (err, account) => {
+        if(err){
+            res.send(err)
+        }
+        res.json(account)
+    });
+};

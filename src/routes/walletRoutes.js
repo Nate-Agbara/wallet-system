@@ -1,4 +1,4 @@
-import { addNewAccount, getAllAccounts } from "../controllers/walletController";
+import { addNewAccount, getAllAccounts, getAccountById } from "../controllers/walletController";
 
 const routes = (app) => {
     app.route('/account')
@@ -12,6 +12,10 @@ const routes = (app) => {
     .post(addNewAccount);
 
     app.route('/account/:accountId')
+
+    //get specific account
+    .get(getAccountById)
+    
     .put((req, res) => 
         res.send('PUT request successful')
     )
