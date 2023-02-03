@@ -1,4 +1,4 @@
-import { addNewAccount } from "../controllers/walletController";
+import { addNewAccount, getAllAccounts } from "../controllers/walletController";
 
 const routes = (app) => {
     app.route('/account')
@@ -7,9 +7,7 @@ const routes = (app) => {
         console.log(`Request from ${req.originalUrl}`)
         console.log(`Request type: ${req.method}`)
         next();
-    }, (req, res, next) => {
-        res.send('GET request successful')
-    })
+    }, getAllAccounts)
 
     .post(addNewAccount);
 

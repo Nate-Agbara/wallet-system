@@ -13,3 +13,12 @@ export const addNewAccount = (req, res) => {
         res.json(account)
     });
 };
+
+export const getAllAccounts = (req, res) => {
+    Account.find({}, (err, account) => {
+        if(err){
+            res.send(err)
+        }
+        res.json(account)
+    });
+};
