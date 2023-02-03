@@ -31,3 +31,21 @@ export const getAccountById = (req, res) => {
         res.json(account)
     });
 };
+
+export const updateAccountById = (req, res) => {
+    Account.findOneAndUpdate({ _id: req.params.accountId}, req.body, { new: true }, (err, account) => {
+        if(err){
+            res.send(err)
+        }
+        res.json(account)
+    });
+};
+
+export const deleteAccountById = (req, res) => {
+    Account.remove({ _id: req.params.accountId}, (err) => {
+        if(err){
+            res.send(err)
+        }
+        res.json({message: 'successfully deleted account'})
+    });
+};

@@ -1,4 +1,4 @@
-import { addNewAccount, getAllAccounts, getAccountById } from "../controllers/walletController";
+import { addNewAccount, getAllAccounts, getAccountById, updateAccountById, deleteAccountById } from "../controllers/walletController";
 
 const routes = (app) => {
     app.route('/account')
@@ -15,14 +15,12 @@ const routes = (app) => {
 
     //get specific account
     .get(getAccountById)
-    
-    .put((req, res) => 
-        res.send('PUT request successful')
-    )
 
-    .delete((req, res) => 
-        res.send('DELETE request successfull')
-    )
+    //update account by id
+    .put(updateAccountById)
+
+    //To delete an account
+    .delete(deleteAccountById)
 }
 
 export default routes;
